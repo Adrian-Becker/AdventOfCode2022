@@ -1,0 +1,56 @@
+#ifndef AOC2022_INPUTMANAGER_H
+#define AOC2022_INPUTMANAGER_H
+
+#include <string>
+#include <sstream>
+#include <vector>
+#include <fstream>
+
+class InputManager {
+public:
+    InputManager(int argc, char *argv[]);
+
+    // checks whether there is another line and moves to the next line
+    bool next_line();
+
+    // checks whether the current line is empty
+    bool empty() const;
+
+    // return the current line
+    const std::string &line() const;
+
+    // splits a string by a delimiter D in the form ADB, returns A and deletes AD from the string
+    std::string substring(std::string delimiter = " ");
+
+    // returns the first number in the current string and removes it
+    int num(std::string delimiter = "");
+
+    // returns the first number in the current string and removes it
+    double num_double(std::string delimiter = "");
+
+    // parses the current line as a number
+    int line_as_num() const;
+
+    // parses the current line as a number
+    double line_as_num_double() const;
+
+
+    // returns the first n-numbers in the current string and removes them
+    std::vector<int> nums(std::size_t n, std::string delimiter = "");
+
+    // returns the first n-numbers in the current string and removes them
+    std::vector<double> nums_double(std::size_t n, std::string delimiter = "");
+
+    // returns the all numbers in the current string and removes them
+    std::vector<int> nums(std::string delimiter = "");
+
+    // returns the all numbers in the current string and removes them
+    std::vector<double> nums_double(std::string delimiter = "");
+
+private:
+    std::ifstream input;
+    std::string current_line;
+};
+
+
+#endif //AOC2022_INPUTMANAGER_H
