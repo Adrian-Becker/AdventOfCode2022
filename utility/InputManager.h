@@ -22,6 +22,12 @@ public:
     // splits a string by a delimiter D in the form ADB, returns A and deletes AD from the string
     std::string substring(std::string delimiter = " ");
 
+    // returns a substring of length n and removes it from the string
+    std::string substring(int n);
+
+    // skips the next n-chars
+    void skip(int n);
+
     // returns the first number in the current string and removes it
     int num(std::string delimiter = "");
 
@@ -46,7 +52,6 @@ public:
 
     // returns the all numbers in the current string and removes them
     std::vector<double> nums_double(std::string delimiter = "");
-
 private:
     std::ifstream input;
     std::string current_line;

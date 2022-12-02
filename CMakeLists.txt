@@ -12,3 +12,9 @@ target_link_libraries(day01a utility)
 
 add_executable(day01b 01/partB.cpp)
 target_link_libraries(day01b utility)
+
+add_executable(day02a 02/partA.cpp)
+target_link_libraries(day02a utility)
+
+add_executable(day02b 02/partB.cpp)
+target_link_libraries(day02b utility)

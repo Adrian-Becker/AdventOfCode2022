@@ -81,4 +81,14 @@ double InputManager::line_as_num_double() const {
     return std::stod(current_line);
 }
 
+std::string InputManager::substring(int n) {
+    std::string result = current_line.substr(0, n);
+    current_line.erase(0, n);
+    return result;
+}
+
+void InputManager::skip(int n) {
+    current_line.erase(0, n);
+}
+
 
