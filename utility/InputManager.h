@@ -25,6 +25,9 @@ public:
     // returns a substring of length n and removes it from the string
     std::string substring(int n);
 
+    // returns a single char and removes it from the string
+    char get_char();
+
     // skips the next n-chars
     void skip(int n);
 
@@ -40,7 +43,6 @@ public:
     // parses the current line as a number
     double line_as_num_double() const;
 
-
     // returns the first n-numbers in the current string and removes them
     std::vector<int> nums(std::size_t n, std::string delimiter = "");
 
@@ -52,6 +54,9 @@ public:
 
     // returns the all numbers in the current string and removes them
     std::vector<double> nums_double(std::string delimiter = "");
+
+    // returns the number of characters in the current line
+    size_t size() const;
 private:
     std::ifstream input;
     std::string current_line;

@@ -14,6 +14,10 @@ InputManager::InputManager(int argc, char **argv) {
     }
 }
 
+std::size_t InputManager::size() const {
+    return current_line.size();
+}
+
 bool InputManager::next_line() {
     if (input.peek() != EOF) {
         std::getline(input, current_line);
@@ -89,6 +93,12 @@ std::string InputManager::substring(int n) {
 
 void InputManager::skip(int n) {
     current_line.erase(0, n);
+}
+
+char InputManager::get_char() {
+    char c = current_line[0];
+    current_line.erase(0, 1);
+    return c;
 }
 
 
