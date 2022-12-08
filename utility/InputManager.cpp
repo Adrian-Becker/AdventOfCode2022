@@ -101,4 +101,8 @@ char InputManager::get_char() {
     return c;
 }
 
+bool InputManager::starts_with(const std::string &prefix) const {
+    return current_line.rfind(prefix, 0) == 0;
+}
+
 

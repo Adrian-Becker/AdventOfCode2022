@@ -57,6 +57,9 @@ public:
 
     // returns the number of characters in the current line
     size_t size() const;
+
+    // check if the current line starts with the given prefix
+    bool starts_with(const std::string &prefix) const;
 private:
     std::ifstream input;
     std::string current_line;
