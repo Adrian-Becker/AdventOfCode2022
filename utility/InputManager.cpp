@@ -92,7 +92,7 @@ std::string InputManager::substring(int n) {
 }
 
 void InputManager::skip(int n) {
-    current_line.erase(0, n);
+    current_line.erase(0, std::min(n, (int) current_line.length()));
 }
 
 char InputManager::get_char() {
