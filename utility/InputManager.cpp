@@ -36,6 +36,11 @@ const std::string &InputManager::line() const {
 
 std::string InputManager::substring(std::string delimiter) {
     auto index = current_line.find(delimiter);
+    if (index == std::string::npos) {
+        std::string string = current_line;
+        current_line.clear();
+        return string;
+    }
     std::string string = current_line.substr(0, index);
     current_line.erase(0, index + delimiter.length());
     return string;
