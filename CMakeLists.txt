@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(${PROJECT_SOURCE_DIR}/utility)
 
-add_library(utility utility/InputManager.cpp)
+add_library(utility utility/InputManager.cpp utility/LineInput.cpp)
 
 # link utility to all target
 link_libraries(utility)
@@ -57,3 +57,7 @@ add_executable(day11b 11/partB.cpp)
 # day 12
 add_executable(day12a 12/partA.cpp)
 add_executable(day12b 12/partB.cpp)
+
+# day 13
+add_executable(day13a 13/partA.cpp)
+add_executable(day13b 13/partB.cpp)
