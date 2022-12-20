@@ -22,7 +22,7 @@ struct Grid {
         return true;
     }
 
-    bool set(Position position) {
+    void set(Position position) {
         state.insert(position);
     }
 };

@@ -55,7 +55,7 @@ struct Cost {
         return n;
     }
 
-    bool buy(State &state) const {
+    void buy(State &state) const {
         state.ore -= ore;
         state.clay -= clay;
         state.obsidian -= obsidian;

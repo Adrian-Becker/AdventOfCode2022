@@ -41,7 +41,7 @@ struct Grid {
         return true;
     }
 
-    bool set(Position position) {
+    void set(Position position) {
         state.insert(position);
 
         bounding_box.x_min = std::min(bounding_box.x_min, position.x);
