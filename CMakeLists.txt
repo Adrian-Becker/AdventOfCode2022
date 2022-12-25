@@ -105,3 +105,6 @@ add_executable(day23b 23/partB.cpp)
 # day 24
 add_executable(day24a 24/partA.cpp)
 add_executable(day24b 24/partB.cpp)
+
+# day 25
+add_executable(day25a 25/partA.cpp)
